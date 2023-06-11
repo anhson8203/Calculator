@@ -21,7 +21,7 @@ namespace CalculatorApplication
 
         private void ButtonSwitch_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             AdvancedMode form2 = new AdvancedMode();
             form2.ShowDialog();
             Application.Exit();

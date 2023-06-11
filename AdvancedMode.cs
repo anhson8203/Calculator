@@ -21,7 +21,7 @@ namespace CalculatorApplication
 
         private void ButtonSwitch_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             Calculator calculator = new Calculator();
             calculator.ShowDialog();
             Application.Exit();
