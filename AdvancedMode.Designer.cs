@@ -251,7 +251,7 @@
             this.buttonDivision.TabIndex = 46;
             this.buttonDivision.Text = "÷";
             this.buttonDivision.UseVisualStyleBackColor = false;
-            this.buttonDivision.Click += new System.EventHandler(this.Button_Divison_Click);
+            this.buttonDivision.Click += new System.EventHandler(this.Button_Division_Click);
             // 
             // buttonMultiplication
             // 
@@ -290,7 +290,7 @@
             this.buttonAddition.TabIndex = 43;
             this.buttonAddition.Text = "+";
             this.buttonAddition.UseVisualStyleBackColor = false;
-            this.buttonAddition.Click += new System.EventHandler(this.Button_Addittion_Click);
+            this.buttonAddition.Click += new System.EventHandler(this.Button_Addition_Click);
             // 
             // buttonEquals
             // 
@@ -516,7 +516,7 @@
             // AdvancedMode
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(341, 572);
+            this.ClientSize = new System.Drawing.Size(351, 582);
             this.Controls.Add(this.textBoxMode);
             this.Controls.Add(this.buttonSwitch);
             this.Controls.Add(this.button19);
@@ -562,7 +562,6 @@
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

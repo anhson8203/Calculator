@@ -283,6 +283,7 @@
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ReadOnly = true;
             this.textBoxOutput.ShortcutsEnabled = false;
+            this.textBoxOutput.TextChanged += new System.EventHandler(this.TextBoxOutput_TextChanged);
             // 
             // Calculator
             // 
@@ -322,7 +323,6 @@
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

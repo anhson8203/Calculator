@@ -1,68 +1,56 @@
 ﻿using Krypton.Toolkit;
 using System;
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace CalculatorApplication
 {
     public partial class Calculator : KryptonForm
     {
-        private double valueOne = 0.0;
-        private double valueTwo = 0.0;
-        private double result = 0.0;
-        private string operators = "";
-        private readonly string mathError = "MATH Error";
-        private readonly string synError = "SYNTAX Error";
+        private double _valueOne;
+        private double _valueTwo;
+        private double _result;
+        private string _operators = "";
+        private const string MathError = "MATH Error";
+        private const string SynError = "SYNTAX Error";
 
-        public Calculator()
-        {
-            InitializeComponent();
-        }
+        public Calculator() => InitializeComponent();
 
         private void ButtonSwitch_Click(object sender, EventArgs e)
         {
             Hide();
-            AdvancedMode form2 = new AdvancedMode();
+            var form2 = new AdvancedMode();
             form2.ShowDialog();
             Application.Exit();
         }
 
-        private void Button_Clear_Click(Object sender, EventArgs e)
-        {
-            textBoxOutput.Text = "0";
-        }
+        private void Button_Clear_Click(Object sender, EventArgs e) => textBoxOutput.Text = "0";
 
         private void Button_ClearEntry_Click(Object sender, EventArgs e)
         {
-            valueOne = 0.0;
-            valueTwo = 0.0;
-            result = 0.0;
-            operators = "";
+            _valueOne = 0.0;
+            _valueTwo = 0.0;
+            _result = 0.0;
+            _operators = "";
             textBoxOutput.Text = "0";
             textBoxCalculation.Clear();
         }
 
         private void Button_ClearRight_Click(Object sender, EventArgs e)
         {
-            if (textBoxOutput.Text.Length > 1)
-            {
-                textBoxOutput.Text = textBoxOutput.Text.Remove(textBoxOutput.Text.Length - 1, 1);
-            }
-            else
-            {
-                textBoxOutput.Text = "0";
-            }
+            textBoxOutput.Text = textBoxOutput.Text.Length > 1 ? textBoxOutput.Text.Remove(textBoxOutput.Text.Length - 1, 1) : "0";
         }
 
         private void Button_Click(Object sender, EventArgs e)
         {
             if (textBoxOutput.Text == "0")
             {
-                textBoxOutput.Text = (sender as Button).Text;
+                textBoxOutput.Text = ((Button)sender).Text;
             }
             else
             {
-                textBoxOutput.Text += (sender as Button).Text;
+                textBoxOutput.Text += ((Button)sender).Text;
             }
         }
 
@@ -100,57 +88,57 @@ namespace CalculatorApplication
 
         private void Button_Subtraction_Click(Object sender, EventArgs e)
         {
-            valueOne = double.Parse(textBoxOutput.Text);
+            _valueOne = double.Parse(textBoxOutput.Text);
             textBoxOutput.Clear();
-            textBoxCalculation.Text = valueOne + " - ";
-            operators = "-";
+            textBoxCalculation.Text = _valueOne + " - ";
+            _operators = "-";
         }
 
         private void Button_Addition_Click(Object sender, EventArgs e)
         {
-            valueOne = double.Parse(textBoxOutput.Text);
+            _valueOne = double.Parse(textBoxOutput.Text);
             textBoxOutput.Clear();
-            textBoxCalculation.Text = valueOne + " + ";
-            operators = "+";
+            textBoxCalculation.Text = _valueOne + " + ";
+            _operators = "+";
         }
 
         private void Button_Multiplication_Click(Object sender, EventArgs e)
         {
-            valueOne = double.Parse(textBoxOutput.Text);
+            _valueOne = double.Parse(textBoxOutput.Text);
             textBoxOutput.Clear();
-            textBoxCalculation.Text = valueOne + " x ";
-            operators = "*";
+            textBoxCalculation.Text = _valueOne + " x ";
+            _operators = "*";
         }
 
         private void Button_Remainder_Click(Object sender, EventArgs e)
         {
-            valueOne = double.Parse(textBoxOutput.Text);
+            _valueOne = double.Parse(textBoxOutput.Text);
             textBoxOutput.Clear();
-            textBoxCalculation.Text = valueOne + " % ";
-            operators = "%";
+            textBoxCalculation.Text = _valueOne + " % ";
+            _operators = "%";
         }
 
         private void Button_Division_Click(Object sender, EventArgs e)
         {
-            valueOne = double.Parse(textBoxOutput.Text);
+            _valueOne = double.Parse(textBoxOutput.Text);
             textBoxOutput.Clear();
-            textBoxCalculation.Text = valueOne + " ÷ ";
-            operators = "/";
+            textBoxCalculation.Text = _valueOne + " ÷ ";
+            _operators = "/";
         }
 
         private void Button_Square_Click(Object sender, EventArgs e)
         {
             try
             {
-                valueOne = double.Parse(textBoxOutput.Text);
-                textBoxCalculation.Text = "sqr(" + valueOne + ")";
-                result = valueOne * valueOne;
-                textBoxOutput.Text = result.ToString();
+                _valueOne = double.Parse(textBoxOutput.Text);
+                textBoxCalculation.Text = "sqr(" + _valueOne + ")";
+                _result = _valueOne * _valueOne;
+                textBoxOutput.Text = _result.ToString();
             }
             catch (Exception)
             {
                 textBoxCalculation.Clear();
-                textBoxOutput.Text = synError;
+                textBoxOutput.Text = SynError;
             }
         }
 
@@ -158,23 +146,23 @@ namespace CalculatorApplication
         {
             try
             {
-                valueOne = double.Parse(textBoxOutput.Text);
-                if (valueOne < 0)
+                _valueOne = double.Parse(textBoxOutput.Text);
+                if (_valueOne < 0)
                 {
                     textBoxCalculation.Clear();
-                    textBoxOutput.Text = mathError;
+                    textBoxOutput.Text = MathError;
                 }
                 else
                 {
-                    textBoxCalculation.Text = "√(" + valueOne + ")";
-                    result = Math.Sqrt(valueOne);
-                    textBoxOutput.Text = result.ToString();
+                    textBoxCalculation.Text = "√(" + _valueOne + ")";
+                    _result = Math.Sqrt(_valueOne);
+                    textBoxOutput.Text = _result.ToString(CultureInfo.CurrentCulture);
                 }
             }
             catch (Exception)
             {
                 textBoxCalculation.Clear();
-                textBoxOutput.Text = synError;
+                textBoxOutput.Text = SynError;
             }
         }
 
@@ -182,23 +170,23 @@ namespace CalculatorApplication
         {
             try
             {
-                valueOne = double.Parse(textBoxOutput.Text);
-                if (valueOne == 0)
+                _valueOne = double.Parse(textBoxOutput.Text);
+                if (_valueOne == 0)
                 {
                     textBoxCalculation.Clear();
-                    textBoxOutput.Text = mathError;
+                    textBoxOutput.Text = MathError;
                 }
                 else
                 {
-                    textBoxCalculation.Text = "1/(" + valueOne + ")";
-                    result = 1.0 / valueOne;
-                    textBoxOutput.Text = result.ToString();
+                    textBoxCalculation.Text = "1/(" + _valueOne + ")";
+                    _result = 1.0 / _valueOne;
+                    textBoxOutput.Text = _result.ToString(CultureInfo.CurrentCulture);
                 }
             }
             catch (Exception)
             {
                 textBoxCalculation.Clear();
-                textBoxOutput.Text = synError;
+                textBoxOutput.Text = SynError;
             }
         }
 
@@ -209,57 +197,59 @@ namespace CalculatorApplication
                 if (textBoxCalculation.Text.Contains("="))
                 {
                     textBoxCalculation.Clear();
-                    textBoxOutput.Text = synError;
+                    textBoxOutput.Text = SynError;
                 }
                 else
                 {
-                    switch (operators)
+                    switch (_operators)
                     {
                         case "-":
-                            valueTwo = double.Parse(textBoxOutput.Text);
-                            result = valueOne - valueTwo;
-                            textBoxCalculation.Text += valueTwo + " = ";
-                            textBoxOutput.Text = result.ToString();
+                            _valueTwo = double.Parse(textBoxOutput.Text);
+                            _result = _valueOne - _valueTwo;
+                            textBoxCalculation.Text += _valueTwo + " = ";
+                            textBoxOutput.Text = _result.ToString(CultureInfo.CurrentCulture);
                             break;
                         case "+":
-                            valueTwo = double.Parse(textBoxOutput.Text);
-                            result = valueOne + valueTwo;
-                            textBoxCalculation.Text += valueTwo + " = ";
-                            textBoxOutput.Text = result.ToString();
+                            _valueTwo = double.Parse(textBoxOutput.Text);
+                            _result = _valueOne + _valueTwo;
+                            textBoxCalculation.Text += _valueTwo + " = ";
+                            textBoxOutput.Text = _result.ToString(CultureInfo.CurrentCulture);
                             break;
                         case "%":
-                            valueTwo = double.Parse(textBoxOutput.Text);
-                            if (valueTwo == 0)
+                            _valueTwo = double.Parse(textBoxOutput.Text);
+                            if (_valueTwo == 0)
                             {
                                 textBoxCalculation.Clear();
-                                textBoxOutput.Text = mathError;
+                                textBoxOutput.Text = MathError;
                             }
                             else
                             {
-                                result = valueOne % valueTwo;
-                                textBoxCalculation.Text += valueTwo + " = ";
-                                textBoxOutput.Text = result.ToString();
+                                _result = _valueOne % _valueTwo;
+                                textBoxCalculation.Text += _valueTwo + " = ";
+                                textBoxOutput.Text = _result.ToString(CultureInfo.CurrentCulture);
                             }
+
                             break;
                         case "*":
-                            valueTwo = double.Parse(textBoxOutput.Text);
-                            result = valueOne * valueTwo;
-                            textBoxCalculation.Text += valueTwo + " = ";
-                            textBoxOutput.Text = result.ToString();
+                            _valueTwo = double.Parse(textBoxOutput.Text);
+                            _result = _valueOne * _valueTwo;
+                            textBoxCalculation.Text += _valueTwo + " = ";
+                            textBoxOutput.Text = _result.ToString(CultureInfo.CurrentCulture);
                             break;
                         case "/":
-                            valueTwo = double.Parse(textBoxOutput.Text);
-                            if (valueTwo == 0)
+                            _valueTwo = double.Parse(textBoxOutput.Text);
+                            if (_valueTwo == 0)
                             {
                                 textBoxCalculation.Clear();
-                                textBoxOutput.Text = mathError;
+                                textBoxOutput.Text = MathError;
                             }
                             else
                             {
-                                result = valueOne / valueTwo;
-                                textBoxCalculation.Text += valueTwo + " = ";
-                                textBoxOutput.Text = result.ToString();
+                                _result = _valueOne / _valueTwo;
+                                textBoxCalculation.Text += _valueTwo + " = ";
+                                textBoxOutput.Text = _result.ToString(CultureInfo.CurrentCulture);
                             }
+
                             break;
                     }
                 }
@@ -267,13 +257,13 @@ namespace CalculatorApplication
             catch (Exception)
             {
                 textBoxCalculation.Clear();
-                textBoxOutput.Text = synError;
+                textBoxOutput.Text = SynError;
             }
         }
 
         private void TextBoxOutput_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxOutput.Text.Length > 8 && textBoxOutput.Text != mathError && textBoxOutput.Text != synError)
+            if (textBoxOutput.Text.Length > 8 && textBoxOutput.Text != MathError && textBoxOutput.Text != SynError)
             {
                 textBoxOutput.Font = new Font("Microsoft Sans Serif", 20, FontStyle.Regular);
                 textBoxOutput.Location = new Point(3, 63);
