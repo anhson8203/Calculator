@@ -39,7 +39,14 @@ namespace CalculatorApplication
 
         private void Button_ClearRight_Click(Object sender, EventArgs e)
         {
-            textBoxOutput.Text = textBoxOutput.Text.Length > 1 ? textBoxOutput.Text.Remove(textBoxOutput.Text.Length - 1, 1) : "0";
+            if (textBoxOutput.Text == MathError || textBoxOutput.Text == SynError)
+            {
+                textBoxOutput.Text = "0";
+            }
+            else
+            {
+                textBoxOutput.Text = textBoxOutput.Text.Length > 1 ? textBoxOutput.Text.Remove(textBoxOutput.Text.Length - 1, 1) : "0";
+            }
         }
 
         private void Button_Click(Object sender, EventArgs e)
