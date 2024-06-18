@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "D:\\RMIT University\\Self Study\\C#\\Calculator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F0E07842-23FE-4A4C-9903-AB4443D86D6F}|CalculatorApplication.csproj|d:\\rmit university\\self study\\c#\\calculator\\standardmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0E07842-23FE-4A4C-9903-AB4443D86D6F}|CalculatorApplication.csproj|solutionrelative:standardmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0E07842-23FE-4A4C-9903-AB4443D86D6F}|CalculatorApplication.csproj|D:\\RMIT University\\Self Study\\C#\\Calculator\\standardmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F0E07842-23FE-4A4C-9903-AB4443D86D6F}|CalculatorApplication.csproj|solutionrelative:standardmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0E07842-23FE-4A4C-9903-AB4443D86D6F}|CalculatorApplication.csproj|D:\\RMIT University\\Self Study\\C#\\Calculator\\advancedmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F0E07842-23FE-4A4C-9903-AB4443D86D6F}|CalculatorApplication.csproj|solutionrelative:advancedmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0E07842-23FE-4A4C-9903-AB4443D86D6F}|CalculatorApplication.csproj|D:\\RMIT University\\Self Study\\C#\\Calculator\\advancedmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F0E07842-23FE-4A4C-9903-AB4443D86D6F}|CalculatorApplication.csproj|d:\\rmit university\\self study\\c#\\calculator\\advancedmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F0E07842-23FE-4A4C-9903-AB4443D86D6F}|CalculatorApplication.csproj|solutionrelative:advancedmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0E07842-23FE-4A4C-9903-AB4443D86D6F}|CalculatorApplication.csproj|d:\\rmit university\\self study\\c#\\calculator\\advancedmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0E07842-23FE-4A4C-9903-AB4443D86D6F}|CalculatorApplication.csproj|solutionrelative:advancedmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,49 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StandardMode.cs",
-              "DocumentMoniker": "D:\\RMIT University\\Self Study\\C#\\Calculator\\StandardMode.cs",
-              "RelativeDocumentMoniker": "StandardMode.cs",
-              "ToolTip": "D:\\RMIT University\\Self Study\\C#\\Calculator\\StandardMode.cs",
-              "RelativeToolTip": "StandardMode.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwE0AAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-06-11T21:31:34.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "AdvancedMode.cs",
               "DocumentMoniker": "D:\\RMIT University\\Self Study\\C#\\Calculator\\AdvancedMode.cs",
               "RelativeDocumentMoniker": "AdvancedMode.cs",
               "ToolTip": "D:\\RMIT University\\Self Study\\C#\\Calculator\\AdvancedMode.cs",
               "RelativeToolTip": "AdvancedMode.cs",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAiwBEAAAA3AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-06-11T21:31:31.338Z"
+              "WhenOpened": "2024-06-18T15:19:06.575Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AdvancedMode.cs [Design]",
               "DocumentMoniker": "D:\\RMIT University\\Self Study\\C#\\Calculator\\AdvancedMode.cs",
               "RelativeDocumentMoniker": "AdvancedMode.cs",
               "ToolTip": "D:\\RMIT University\\Self Study\\C#\\Calculator\\AdvancedMode.cs [Design]",
               "RelativeToolTip": "AdvancedMode.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-06-11T21:31:28.24Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StandardMode.cs [Design]",
-              "DocumentMoniker": "D:\\RMIT University\\Self Study\\C#\\Calculator\\StandardMode.cs",
-              "RelativeDocumentMoniker": "StandardMode.cs",
-              "ToolTip": "D:\\RMIT University\\Self Study\\C#\\Calculator\\StandardMode.cs [Design]",
-              "RelativeToolTip": "StandardMode.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-06-11T21:31:26.189Z"
+              "WhenOpened": "2024-06-18T15:19:01.856Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
