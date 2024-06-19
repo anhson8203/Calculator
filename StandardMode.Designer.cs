@@ -1,11 +1,14 @@
-﻿namespace CalculatorApplication
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace CalculatorApplication
 {
     partial class Calculator
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -327,35 +330,35 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button0;
-        private System.Windows.Forms.Button buttonDecimal;
-        private System.Windows.Forms.Button buttonEquals;
-        private System.Windows.Forms.Button buttonAddition;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button buttonSubtraction;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button buttonMultiplication;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button buttonDivision;
-        private System.Windows.Forms.Button buttonClear;
-        private System.Windows.Forms.Button buttonClearEntry;
-        private System.Windows.Forms.Button buttonSquareRoot;
-        private System.Windows.Forms.Button buttonSquare;
-        private System.Windows.Forms.Button buttonRemainder;
-        private System.Windows.Forms.Button buttonMinusPlus;
-        private System.Windows.Forms.Button buttonOver;
-        private System.Windows.Forms.Button ButtonClearRight;
-        private System.Windows.Forms.Button buttonSwitch;
-        private System.Windows.Forms.TextBox textBoxMode;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBoxOutput;
-        private System.Windows.Forms.TextBox textBoxCalculation;
+        private Button button0;
+        private Button buttonDecimal;
+        private Button buttonEquals;
+        private Button buttonAddition;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button buttonSubtraction;
+        private Button button4;
+        private Button button5;
+        private Button button6;
+        private Button buttonMultiplication;
+        private Button button7;
+        private Button button8;
+        private Button button9;
+        private Button buttonDivision;
+        private Button buttonClear;
+        private Button buttonClearEntry;
+        private Button buttonSquareRoot;
+        private Button buttonSquare;
+        private Button buttonRemainder;
+        private Button buttonMinusPlus;
+        private Button buttonOver;
+        private Button ButtonClearRight;
+        private Button buttonSwitch;
+        private TextBox textBoxMode;
+        private Panel panel1;
+        private TextBox textBoxOutput;
+        private TextBox textBoxCalculation;
     }
 }
 

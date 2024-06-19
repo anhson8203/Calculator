@@ -1,8 +1,8 @@
-﻿using Krypton.Toolkit;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
+using Krypton.Toolkit;
 
 namespace CalculatorApplication
 {
@@ -25,9 +25,9 @@ namespace CalculatorApplication
             Application.Exit();
         }
 
-        private void Button_Clear_Click(Object sender, EventArgs e) => textBoxOutput.Text = "0";
+        private void Button_Clear_Click(object sender, EventArgs e) => textBoxOutput.Text = "0";
 
-        private void Button_ClearEntry_Click(Object sender, EventArgs e)
+        private void Button_ClearEntry_Click(object sender, EventArgs e)
         {
             _valueOne = 0.0;
             _valueTwo = 0.0;
@@ -37,7 +37,7 @@ namespace CalculatorApplication
             textBoxCalculation.Clear();
         }
 
-        private void Button_ClearRight_Click(Object sender, EventArgs e)
+        private void Button_ClearRight_Click(object sender, EventArgs e)
         {
             if (textBoxOutput.Text == MathError || textBoxOutput.Text == SynError)
             {
@@ -49,7 +49,7 @@ namespace CalculatorApplication
             }
         }
 
-        private void Button_Click(Object sender, EventArgs e)
+        private void Button_Click(object sender, EventArgs e)
         {
             if (textBoxOutput.Text == "0")
             {
@@ -61,7 +61,7 @@ namespace CalculatorApplication
             }
         }
 
-        private void Button0_Click(Object sender, EventArgs e)
+        private void Button0_Click(object sender, EventArgs e)
         {
             if (textBoxOutput.Text == "0")
             {
@@ -73,7 +73,7 @@ namespace CalculatorApplication
             }
         }
 
-        private void Button_Decimal_Click(Object sender, EventArgs e)
+        private void Button_Decimal_Click(object sender, EventArgs e)
         {
             if (!textBoxOutput.Text.Contains("."))
             {
@@ -81,7 +81,7 @@ namespace CalculatorApplication
             }
         }
 
-        private void Button_MinusPlus_Click(Object sender, EventArgs e)
+        private void Button_MinusPlus_Click(object sender, EventArgs e)
         {
             if (textBoxOutput.Text.Contains("-"))
             {
@@ -93,7 +93,7 @@ namespace CalculatorApplication
             }
         }
 
-        private void Button_Subtraction_Click(Object sender, EventArgs e)
+        private void Button_Subtraction_Click(object sender, EventArgs e)
         {
             _valueOne = double.Parse(textBoxOutput.Text);
             textBoxOutput.Clear();
@@ -101,7 +101,7 @@ namespace CalculatorApplication
             _operators = "-";
         }
 
-        private void Button_Addition_Click(Object sender, EventArgs e)
+        private void Button_Addition_Click(object sender, EventArgs e)
         {
             _valueOne = double.Parse(textBoxOutput.Text);
             textBoxOutput.Clear();
@@ -109,7 +109,7 @@ namespace CalculatorApplication
             _operators = "+";
         }
 
-        private void Button_Multiplication_Click(Object sender, EventArgs e)
+        private void Button_Multiplication_Click(object sender, EventArgs e)
         {
             _valueOne = double.Parse(textBoxOutput.Text);
             textBoxOutput.Clear();
@@ -117,7 +117,7 @@ namespace CalculatorApplication
             _operators = "*";
         }
 
-        private void Button_Remainder_Click(Object sender, EventArgs e)
+        private void Button_Remainder_Click(object sender, EventArgs e)
         {
             _valueOne = double.Parse(textBoxOutput.Text);
             textBoxOutput.Clear();
@@ -125,7 +125,7 @@ namespace CalculatorApplication
             _operators = "%";
         }
 
-        private void Button_Division_Click(Object sender, EventArgs e)
+        private void Button_Division_Click(object sender, EventArgs e)
         {
             _valueOne = double.Parse(textBoxOutput.Text);
             textBoxOutput.Clear();
@@ -133,14 +133,14 @@ namespace CalculatorApplication
             _operators = "/";
         }
 
-        private void Button_Square_Click(Object sender, EventArgs e)
+        private void Button_Square_Click(object sender, EventArgs e)
         {
             try
             {
                 _valueOne = double.Parse(textBoxOutput.Text);
                 textBoxCalculation.Text = "sqr(" + _valueOne + ")";
                 _result = _valueOne * _valueOne;
-                textBoxOutput.Text = _result.ToString();
+                textBoxOutput.Text = _result.ToString(CultureInfo.CurrentCulture);
             }
             catch (Exception)
             {
@@ -149,7 +149,7 @@ namespace CalculatorApplication
             }
         }
 
-        private void Button_SquareRoot_Click(Object sender, EventArgs e)
+        private void Button_SquareRoot_Click(object sender, EventArgs e)
         {
             try
             {
@@ -197,7 +197,7 @@ namespace CalculatorApplication
             }
         }
 
-        private void Button_Equals_Click(Object sender, EventArgs e)
+        private void Button_Equals_Click(object sender, EventArgs e)
         {
             try
             {

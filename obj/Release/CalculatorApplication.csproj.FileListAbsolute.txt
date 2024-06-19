@@ -23,7 +23,6 @@ D:\RMIT University\Self Study\C#\Calculator\bin\Release\en-GB\Calculator.resourc
 D:\RMIT University\Self Study\C#\Calculator\bin\Release\Krypton.Toolkit.dll
 D:\RMIT University\Self Study\C#\Calculator\bin\Release\Krypton.Toolkit.xml
 D:\RMIT University\Self Study\C#\Calculator\obj\Release\CalculatorApplication.csproj.AssemblyReference.cache
-D:\RMIT University\Self Study\C#\Calculator\obj\Release\CalculatorApplication.csproj.SuggestedBindingRedirects.cache
 D:\RMIT University\Self Study\C#\Calculator\obj\Release\CalculatorApplication.Calculator.resources
 D:\RMIT University\Self Study\C#\Calculator\obj\Release\CalculatorApplication.AdvancedMode.resources
 D:\RMIT University\Self Study\C#\Calculator\obj\Release\CalculatorApplication.Properties.Resources.resources
@@ -31,6 +30,6 @@ D:\RMIT University\Self Study\C#\Calculator\obj\Release\CalculatorApplication.Ca
 D:\RMIT University\Self Study\C#\Calculator\obj\Release\CalculatorApplication.csproj.GenerateResource.cache
 D:\RMIT University\Self Study\C#\Calculator\obj\Release\CalculatorApplication.csproj.CoreCompileInputs.cache
 D:\RMIT University\Self Study\C#\Calculator\obj\Release\en-GB\Calculator.resources.dll
-D:\RMIT University\Self Study\C#\Calculator\obj\Release\CalculatorApplication.csproj.CopyComplete
 D:\RMIT University\Self Study\C#\Calculator\obj\Release\Calculator.exe
 D:\RMIT University\Self Study\C#\Calculator\obj\Release\Calculator.pdb
+D:\RMIT University\Self Study\C#\Calculator\obj\Release\Calculat.0E5EF48C.Up2Date
